@@ -2,12 +2,10 @@ import { createRootRoute, Outlet } from "@tanstack/react-router";
 
 import { Sidebar } from "@/components/layout/Sidebar";
 
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { Logo } from "@/components/Logo";
 import { Header } from "@/components/layout/Header";
 
 export const Route = createRootRoute({
@@ -45,7 +43,7 @@ export const Route = createRootRoute({
             </SheetContent>
           </Sheet>
 
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto no-scrollbar">
             <div className="p-4 md:p-8 mx-auto max-w-7xl h-full">
               <Outlet />
             </div>
